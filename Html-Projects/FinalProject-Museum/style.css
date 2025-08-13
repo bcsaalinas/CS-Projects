@@ -1,0 +1,752 @@
+/* === GLOBAL & DARK THEME === */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll from animations */
+}
+
+/* === HEADER === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: linear-gradient(180deg, #1a1a1a, #0d0d0d);
+  border-bottom: 2px solid #00ffff;
+  box-shadow: 0 5px 25px rgba(0, 255, 255, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#header-logo img {
+  transition: transform 0.3s ease;
+}
+
+#header-logo img:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+nav a {
+  color: #00ffcc;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff6600;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff6600;
+  text-shadow: 0 0 15px #ff6600;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* === MAIN CONTENT === */
+main {
+  padding: 40px 20px;
+}
+
+#Main-title {
+  text-align: center;
+  padding: 80px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  margin-bottom: 40px;
+  border: 1px solid #00ffff55;
+}
+
+#Main-title h1 {
+  font-size: 3.5rem;
+  color: #ff6600;
+  text-shadow: 0 0 10px #ff6600, 0 0 20px #ff0000, 0 0 40px #ff0000;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  animation: flicker 2.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 4px #ff6600, 0 0 11px #ff6600, 0 0 19px #ff6600,
+      0 0 40px #ff0000;
+  }
+  50% {
+    opacity: 0.8;
+    text-shadow: 0 0 4px #ff6600, 0 0 10px #ff6600, 0 0 15px #ff6600;
+  }
+}
+
+#Main-title p {
+  font-size: 1.2rem;
+  color: #00ffcc;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* === MENU SECTION === */
+#menu {
+  padding: 60px 20px;
+  position: relative;
+}
+
+#menu h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.menu-item {
+  background: linear-gradient(145deg, #1a1a1a, #111111);
+  border: 2px solid #00ffff33;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  will-change: transform, box-shadow; /* Performance optimization */
+}
+
+.menu-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+  border-color: #00ffff;
+}
+
+.menu-img {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu-img img {
+  border-radius: 15px;
+  border: 3px solid #00ffff88;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
+
+.dish-name {
+  margin-top: 15px;
+  color: #00ffff;
+}
+
+.dish-descrpition {
+  text-align: center;
+}
+
+.dish-price {
+  font-weight: bold;
+}
+
+/* === ORDER FORM === */
+#place-order {
+  padding: 60px 20px;
+}
+
+#place-order h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+  background: linear-gradient(0deg, #1a1a1a, #0d0d0d);
+  border-top: 1px solid #00ffff33;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+footer p i {
+  color: #00ff99;
+}
+
+/* === ENHANCED STREET RACING THEME === */
+
+/* Animated background patterns */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 98px,
+      rgba(0, 255, 255, 0.03) 100px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 98px,
+      rgba(0, 255, 255, 0.03) 100px
+    );
+  z-index: -1;
+  animation: grid-move 20s linear infinite;
+  will-change: transform; /* Performance optimization */
+}
+
+@keyframes grid-move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
+}
+
+/* Racing stripe effects */
+.racing-stripe {
+  position: relative;
+  overflow: hidden;
+}
+
+.racing-stripe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 255, 0.1),
+    transparent
+  );
+  animation: racing-sweep 4s ease-in-out infinite;
+  transform: translateX(-100%);
+  will-change: transform; /* Performance optimization */
+}
+
+@keyframes racing-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* === ABOUT US PAGE STYLES === */
+#our-story,
+#what-makes-us-different,
+#our-philosophy,
+#community {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 50%, #0a0a0a 100%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(0, 255, 255, 0.02) 12px
+    );
+  margin-bottom: 30px;
+  position: relative;
+  border: 1px solid #00ffff22;
+  border-radius: 15px;
+}
+
+#our-story h2,
+#what-makes-us-different h2,
+#our-philosophy h2,
+#community h2 {
+  text-align: center;
+  color: #00ffff;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+#our-story h2::after,
+#what-makes-us-different h2::after,
+#our-philosophy h2::after,
+#community h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #00ffff, transparent);
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.story-content,
+.philosophy-content,
+.community-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.story-content p,
+.philosophy-content p,
+.community-content p {
+  margin-bottom: 25px;
+  line-height: 1.9;
+  color: #e0e0e0;
+  font-size: 17px;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #00ffff11;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.feature-item {
+  background: linear-gradient(145deg, #111111, #0a0a0a),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 5px,
+      rgba(0, 255, 255, 0.05) 7px
+    );
+  border: 2px solid #00ffff33;
+  border-radius: 15px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: engine-idle 8s ease-in-out infinite; /* Renamed from float and adjusted timing */
+  transition: all 0.4s ease;
+  overflow: hidden;
+  will-change: transform, box-shadow; /* Performance optimization */
+}
+
+.feature-item::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00ffff, #0088cc, #00ffff);
+  border-radius: 15px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.feature-item:hover::before {
+  opacity: 1;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.4),
+    0 0 50px rgba(0, 255, 255, 0.3);
+  animation-play-state: paused; /* Pause idle animation on hover for a more controlled feel */
+}
+
+.feature-item:nth-child(even) {
+  animation-delay: -4s; /* Adjusted delay */
+}
+
+.feature-item h3 {
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.feature-item p {
+  color: #ddd;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+blockquote {
+  border-left: 5px solid #00ffff;
+  padding: 30px 30px 30px 40px;
+  margin: 40px auto;
+  font-style: italic;
+  font-size: 20px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  max-width: 800px;
+  position: relative;
+  background: linear-gradient(
+      135deg,
+      rgba(0, 255, 255, 0.1),
+      rgba(0, 136, 204, 0.1)
+    ),
+    rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+blockquote::before,
+blockquote::after {
+  font-size: 80px;
+  color: #00ffff;
+  position: absolute;
+  text-shadow: 0 0 20px #00ffff;
+  /* Removed distracting pulse animation for a cleaner look */
+}
+
+blockquote::before {
+  content: '"';
+  left: 10px;
+  top: -10px;
+}
+
+blockquote::after {
+  content: '"';
+  right: 20px;
+  bottom: -50px;
+}
+
+/* === DELIVERY PAGE STYLES === */
+#delivery-info {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #001a1a 50%, #0a0a0a 100%);
+  text-align: center;
+  position: relative;
+}
+
+#delivery-info h2 {
+  color: #00ffff;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.delivery-zones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 50px auto;
+}
+
+.zone-card {
+  background: linear-gradient(145deg, #111111, #0a0a0a);
+  border: 2px solid #00ffff33;
+  border-radius: 20px;
+  padding: 40px 25px;
+  box-shadow: 0 15px 35px rgba(0, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  will-change: transform, box-shadow; /* Performance optimization */
+}
+
+.zone-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.8s ease;
+}
+
+.zone-card:hover::before {
+  left: 100%;
+}
+
+.zone-card:hover {
+  transform: translateY(-15px) rotateX(5deg);
+  box-shadow: 0 25px 50px rgba(0, 255, 255, 0.4),
+    0 0 60px rgba(0, 255, 255, 0.3);
+  border-color: #00ffff;
+}
+
+.zone-card h3 {
+  color: #00ffcc;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.zone-card p {
+  color: #ddd;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.price-highlight {
+  color: #00ff99;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-shadow: 0 0 10px #00ff99;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* === CONTACT PAGE STYLES === */
+#contact-info {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a0a1a 50%, #0a0a0a 100%);
+}
+
+#contact-info h2 {
+  text-align: center;
+  color: #00ffff;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.contact-card {
+  background: linear-gradient(145deg, #111111, #0a0a0a);
+  border: 2px solid #00ffff33;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent);
+  transition: all 0.6s ease;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.contact-card:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+.contact-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(0, 255, 255, 0.4),
+    0 0 60px rgba(0, 255, 255, 0.3);
+  border-color: #00ffff;
+}
+
+.contact-card h3 {
+  color: #00ffcc;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-card p {
+  color: #ddd;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #111111, #0a0a0a);
+  padding: 50px;
+  border-radius: 20px;
+  border: 2px solid #00ffff33;
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.contact-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(0, 255, 255, 0.02) 12px
+  );
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.contact-form h3 {
+  color: #00ffff;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.8rem;
+  text-shadow: 0 0 15px #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Enhanced form inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(145deg, #0a0a0a, #111111);
+  border: 2px solid #333;
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3),
+    inset 0 0 20px rgba(0, 255, 255, 0.1);
+  outline: none;
+}
+
+/* Racing themed animations */
+@keyframes engine-idle {
+  /* Renamed from float for thematic consistency */
+  0% {
+    transform: translateY(0px) rotate(0.1deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-0.1deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0.1deg);
+  }
+}
+
+/* Removed the distracting nitro-boost animation from all menu items */
+
+/* Traffic lane effect */
+.road-lines {
+  /* Renamed from swimming-lanes */
+  position: relative;
+}
+
+.road-lines::before {
+  /* Renamed from swimming-lanes */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 80px,
+    rgba(255, 255, 255, 0.05) 82px,
+    rgba(255, 255, 255, 0.05) 84px,
+    transparent 86px
+  );
+  pointer-events: none;
+  animation: road-lines-flow 10s linear infinite;
+  will-change: transform; /* Performance optimization */
+}
+
+@keyframes road-lines-flow {
+  from {
+    transform: translateY(-86px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Utility class for neon text effect */
+.neon-text-glow {
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+}

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turbo Delivery - Taco Drift</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="header-logo">
+        <img
+          src="images/logo.png"
+          alt="Taco Turbo Logo"
+          width="150"
+          height="auto"
+        />
+      </div>
+      <nav>
+        <a href="restautant_menu.html">Menu</a>
+        <a href="about_us.html">About us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="Main-title" class="racing-stripe">
+        <h1>🏎️ TURBO DELIVERY 🏎️</h1>
+        <p>
+          FASTER THAN YOUR LAST LAP TIME - We'll drift your tacos straight to
+          your door while the engine's still warm!
+        </p>
+      </section>
+
+      <section id="delivery-info" class="swimming-lanes">
+        <h2>⚡ DELIVERY ZONES & SPEED TIMES ⚡</h2>
+        <p style="color: #00ffcc; font-size: 1.2rem; margin-bottom: 30px">
+          Choose your zone, we'll burn rubber getting to you! 🔥
+        </p>
+
+        <div class="delivery-zones">
+          <article class="zone-card">
+            <h3>🏁 RACING DISTRICT</h3>
+            <div style="font-size: 3rem; margin: 20px 0">🏎️</div>
+            <p>
+              <strong>Zone:</strong> Downtown core, racing tracks, car meets
+            </p>
+            <p><strong>Speed:</strong> 10-20 minutes (LIGHTNING FAST!)</p>
+            <p><strong>Vibe:</strong> Perfect for post-race munchies</p>
+            <p class="price-highlight">FREE DELIVERY $25+</p>
+            <p style="color: #ff6600; font-weight: bold">🔥 MOST POPULAR 🔥</p>
+          </article>
+
+          <article class="zone-card">
+            <h3>🏆 TRAFFIC SWIMMER ZONE 🏆</h3>
+            <div style="font-size: 3rem; margin: 20px 0">🏆</div>
+            <p>
+              <strong>Zone:</strong> Major highways, downtown grids, known
+              high-traffic areas
+            </p>
+            <p><strong>Speed:</strong> 15-25 minutes (We know the backroads)</p>
+            <p>
+              <strong>Vibe:</strong> For when you're stuck in the grind and need
+              a boost
+            </p>
+            <p class="price-highlight">$3.99 DELIVERY</p>
+            <p style="color: #00ccff; font-weight: bold">
+              ⚡ LANE-SPLITTER APPROVED ⚡
+            </p>
+          </article>
+
+          <article class="zone-card">
+            <h3>🌙 NIGHT OWL TERRITORY</h3>
+            <div style="font-size: 3rem; margin: 20px 0">🦉</div>
+            <p>
+              <strong>Zone:</strong> 24/7 gyms, late-night spots, shift workers
+            </p>
+            <p><strong>Speed:</strong> 20-30 minutes</p>
+            <p><strong>Vibe:</strong> We never sleep, neither should you</p>
+            <p class="price-highlight">$4.99 DELIVERY</p>
+            <p style="color: #9900ff; font-weight: bold">
+              🌙 MIDNIGHT SPECIAL 🌙
+            </p>
+          </article>
+
+          <article class="zone-card">
+            <h3>🏎️ DRIFT LOTS</h3>
+            <div style="font-size: 3rem; margin: 20px 0">💨</div>
+            <p>
+              <strong>Zone:</strong> Industrial areas, parking lots, secret
+              meets
+            </p>
+            <p><strong>Speed:</strong> 25-40 minutes</p>
+            <p><strong>Vibe:</strong> We know the spots, no GPS needed</p>
+            <p class="price-highlight">$5.99 DELIVERY</p>
+            <p style="color: #ff0066; font-weight: bold">
+              🔥 UNDERGROUND ONLY 🔥
+            </p>
+          </article>
+        </div>
+
+        <div
+          style="
+            text-align: center;
+            margin: 50px 0;
+            padding: 30px;
+            background: rgba(0, 255, 255, 0.1);
+            border-radius: 15px;
+            border: 2px solid #00ffff33;
+          "
+        >
+          <h3 style="color: #00ffff; margin-bottom: 20px; font-size: 1.8rem">
+            ⚡ DELIVERY GUARANTEE ⚡
+          </h3>
+          <p style="color: #00ffcc; font-size: 1.1rem; line-height: 1.6">
+            If we're late, your next order is <strong>50% OFF</strong>! We don't
+            mess around with delivery times - our drivers are as serious about
+            speed as you are about your ride! 🏎️💨
+          </p>
+        </div>
+      </section>
+
+      <section id="place-order" class="racing-stripe">
+        <h2>🚀 PLACE YOUR TURBO ORDER 🚀</h2>
+        <p style="color: #00ffcc; font-size: 1.1rem; margin-bottom: 30px">
+          Fill out the form and we'll have your tacos racing to you faster than
+          a 0-60 sprint! 🏁
+        </p>
+
+        <form id="delivery-form" style="max-width: 800px; margin: 0 auto">
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 20px;
+              margin-bottom: 30px;
+            "
+          >
+            <div>
+              <label
+                for="customer-name"
+                style="
+                  color: #00ffff;
+                  font-weight: bold;
+                  margin-bottom: 5px;
+                  display: block;
+                "
+                >👤 DRIVER NAME</label
+              >
+              <input
+                type="text"
+                id="customer-name"
+                name="customer-name"
+                placeholder="What should we call you?"
+                required
+                style="
+                  width: 100%;
+                  padding: 15px;
+                  background: linear-gradient(145deg, #0a0a0a, #111111);
+                  border: 2px solid #333;
+                  color: #fff;
+                  border-radius: 10px;
+                  font-family: inherit;
+                "
+              />
+            </div>
+
+            <div>
+              <label
+                for="phone"
+                style="
+                  color: #00ffff;
+                  font-weight: bold;
+                  margin-bottom: 5px;
+                  display: block;
+                "
+                >📱 HOTLINE</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Your fastest contact number"
+                required
+                style="
+                  width: 100%;
+                  padding: 15px;
+                  background: linear-gradient(145deg, #0a0a0a, #111111);
+                  border: 2px solid #333;
+                  color: #fff;
+                  border-radius: 10px;
+                  font-family: inherit;
+                "
+              />
+            </div>
+          </div>
+
+          <div style="margin-bottom: 30px">
+            <label
+              for="address"
+              style="
+                color: #00ffff;
+                font-weight: bold;
+                margin-bottom: 5px;
+                display: block;
+              "
+              >📍 DROP LOCATION</label
+            >
+            <textarea
+              id="address"
+              name="address"
+              rows="3"
+              placeholder="Street address, apartment/unit, special delivery instructions, car description (so we can spot you!)"
+              required
+              style="
+                width: 100%;
+                padding: 15px;
+                background: linear-gradient(145deg, #0a0a0a, #111111);
+                border: 2px solid #333;
+                color: #fff;
+                border-radius: 10px;
+                font-family: inherit;
+                resize: vertical;
+              "
+            ></textarea>
+          </div>
+
+          <div
+            style="
+              background: rgba(0, 255, 255, 0.05);
+              padding: 30px;
+              border-radius: 15px;
+              border: 2px solid #00ffff22;
+              margin-bottom: 30px;
+            "
+          >
+            <h3
+              style="
+                color: #00ffff;
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 1.5rem;
+              "
+            >
+              🌮 SELECT YOUR FUEL 🌮
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+              "
+            >
+              <div
+                style="
+                  background: rgba(0, 0, 0, 0.3);
+                  padding: 20px;
+                  border-radius: 10px;
+                  border: 1px solid #00ffff33;
+                "
+              >
+                <label
+                  for="turbotaco-delivery"
+                  style="
+                    color: #00ffcc;
+                    font-weight: bold;
+                    display: block;
+                    margin-bottom: 10px;
+                  "
+                  >🚗 TURBO TACO - $4.50</label
+                >
+                <p style="color: #ccc; font-size: 0.9rem; margin-bottom: 10px">
+                  The classic that started it all
+                </p>
+                <input
+                  type="number"
+                  id="turbotaco-delivery"
+                  name="turbotaco-delivery"
+                  min="0"
+                  max="20"
+                  value="0"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    background: #111;
+                    border: 1px solid #333;
+                    color: #fff;
+                    border-radius: 5px;
+                  "
+                />
+              </div>
+
+              <div
+                style="
+                  background: rgba(0, 0, 0, 0.3);
+                  padding: 20px;
+                  border-radius: 10px;
+                  border: 1px solid #00ffff33;
+                "
+              >
+                <label
+                  for="swimmers-pick-delivery"
+                  style="
+                    color: #00ffcc;
+                    font-weight: bold;
+                    display: block;
+                    margin-bottom: 10px;
+                  "
+                  >🏆 LANE SPLITTER - $4.75</label
+                >
+                <p style="color: #ccc; font-size: 0.9rem; margin-bottom: 10px">
+                  For the agile and daring
+                </p>
+                <input
+                  type="number"
+                  id="swimmers-pick-delivery"
+                  name="swimmers-pick-delivery"
+                  min="0"
+                  max="20"
+                  value="0"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    background: #111;
+                    border: 1px solid #333;
+                    color: #fff;
+                    border-radius: 5px;
+                  "
+                />
+              </div>
+
+              <div
+                style="
+                  background: rgba(0, 0, 0, 0.3);
+                  padding: 20px;
+                  border-radius: 10px;
+                  border: 1px solid #00ffff33;
+                "
+              >
+                <label
+                  for="donut-taco-delivery"
+                  style="
+                    color: #00ffcc;
+                    font-weight: bold;
+                    display: block;
+                    margin-bottom: 10px;
+                  "
+                  >🍩 DONUT TACO - $4.25</label
+                >
+                <p style="color: #ccc; font-size: 0.9rem; margin-bottom: 10px">
+                  Named after tire marks
+                </p>
+                <input
+                  type="number"
+                  id="donut-taco-delivery"
+                  name="donut-taco-delivery"
+                  min="0"
+                  max="20"
+                  value="0"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    background: #111;
+                    border: 1px solid #333;
+                    color: #fff;
+                    border-radius: 5px;
+                  "
+                />
+              </div>
+
+              <div
+                style="
+                  background: rgba(0, 0, 0, 0.3);
+                  padding: 20px;
+                  border-radius: 10px;
+                  border: 1px solid #00ffff33;
+                "
+              >
+                <label
+                  for="nitro-veggie-delivery"
+                  style="
+                    color: #00ffcc;
+                    font-weight: bold;
+                    display: block;
+                    margin-bottom: 10px;
+                  "
+                  >🥬 NITRO VEGGIE - $4.00</label
+                >
+                <p style="color: #ccc; font-size: 0.9rem; margin-bottom: 10px">
+                  Plant-powered speed
+                </p>
+                <input
+                  type="number"
+                  id="nitro-veggie-delivery"
+                  name="nitro-veggie-delivery"
+                  min="0"
+                  max="20"
+                  value="0"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    background: #111;
+                    border: 1px solid #333;
+                    color: #fff;
+                    border-radius: 5px;
+                  "
+                />
+              </div>
+
+              <div
+                style="
+                  background: rgba(0, 0, 0, 0.3);
+                  padding: 20px;
+                  border-radius: 10px;
+                  border: 1px solid #00ffff33;
+                "
+              >
+                <label
+                  for="drift-king-delivery"
+                  style="
+                    color: #00ffcc;
+                    font-weight: bold;
+                    display: block;
+                    margin-bottom: 10px;
+                  "
+                  >👑 DRIFT KING - $5.50</label
+                >
+                <p style="color: #ccc; font-size: 0.9rem; margin-bottom: 10px">
+                  The ultimate champion
+                </p>
+                <input
+                  type="number"
+                  id="drift-king-delivery"
+                  name="drift-king-delivery"
+                  min="0"
+                  max="20"
+                  value="0"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    background: #111;
+                    border: 1px solid #333;
+                    color: #fff;
+                    border-radius: 5px;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            style="
+              background: rgba(0, 255, 255, 0.05);
+              padding: 20px;
+              border-radius: 10px;
+              border: 2px solid #00ffff22;
+              margin-bottom: 30px;
+            "
+          >
+            <h3 style="color: #00ffff; margin-bottom: 15px">
+              ⚡ TURBO BOOST ADD-ONS ⚡
+            </h3>
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px"
+            >
+              <label
+                style="
+                  color: #00ffcc;
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer;
+                "
+              >
+                <input
+                  type="checkbox"
+                  id="extra-sauce-delivery"
+                  name="extra-sauce-delivery"
+                  style="margin-right: 10px; transform: scale(1.2)"
+                />
+                🔥 Extra Sauce (+$0.75)
+              </label>
+              <label
+                style="
+                  color: #00ffcc;
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer;
+                "
+              >
+                <input
+                  type="checkbox"
+                  id="extra-cheese-delivery"
+                  name="extra-cheese-delivery"
+                  style="margin-right: 10px; transform: scale(1.2)"
+                />
+                🧀 Extra Cheese (+$1.25)
+              </label>
+              <label
+                style="
+                  color: #00ffcc;
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer;
+                "
+              >
+                <input
+                  type="checkbox"
+                  id="nitro-boost"
+                  name="nitro-boost"
+                  style="margin-right: 10px; transform: scale(1.2)"
+                />
+                🚀 Nitro Boost Delivery (+$2.00)
+              </label>
+              <label
+                style="
+                  color: #00ffcc;
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer;
+                "
+              >
+                <input
+                  type="checkbox"
+                  id="stealth-mode"
+                  name="stealth-mode"
+                  style="margin-right: 10px; transform: scale(1.2)"
+                />
+                🥷 Stealth Mode Delivery (+$3.00)
+              </label>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 30px">
+            <label
+              for="delivery-notes"
+              style="
+                color: #00ffff;
+                font-weight: bold;
+                margin-bottom: 5px;
+                display: block;
+              "
+              >💬 SPECIAL DELIVERY INSTRUCTIONS</label
+            >
+            <textarea
+              id="delivery-notes"
+              name="delivery-notes"
+              rows="4"
+              placeholder="Car description (so we can spot you in the lot), meet location, buzzer code, secret handshake, etc. No cops. 🚓🚫"
+              style="
+                width: 100%;
+                padding: 15px;
+                background: linear-gradient(145deg, #0a0a0a, #111111);
+                border: 2px solid #333;
+                color: #fff;
+                border-radius: 10px;
+                font-family: inherit;
+                resize: vertical;
+              "
+            ></textarea>
+          </div>
+
+          <input
+            type="submit"
+            value="🏁 SEND MY ORDER TO THE TRACK 🏁"
+            style="
+              background: linear-gradient(45deg, #00ffff, #0088cc);
+              color: #000;
+              padding: 20px 40px;
+              font-size: 1.2rem;
+              font-weight: bold;
+              border: none;
+              border-radius: 15px;
+              cursor: pointer;
+              box-shadow: 0 0 30px #00ffff;
+              transition: all 0.3s ease;
+              display: block;
+              margin: 0 auto;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              font-family: inherit;
+            "
+            onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 50px #00ffff'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 30px #00ffff'"
+          />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p><i>Made with love by Beto! hope u enjoy :p</i></p>
+    </footer>
+  </body>
+</html>
